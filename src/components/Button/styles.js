@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.button `
     padding: 10px;
-    border: 1px solid #CDCDCD;
-    background-color: #808080;
-    color: #FFFFFF;
+    border: 1px solid #a99f93;
+    background-color: #745141;
+    color: #a99f93;
 
     font-size: 24px;
     font-weight: 700;

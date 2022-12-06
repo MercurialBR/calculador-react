@@ -101,6 +101,7 @@ const App = () => {
         <Input value={currentNumber}/>
         <Row>
           <Button label="c" onCLick={handleOnClear}/>
+          <Button label="=" onCLick={handleEquals}/>
         </Row>
         <Row>
           <Button label="x" onCLick={multiplicaNumeros} />
@@ -125,11 +126,9 @@ const App = () => {
 
         </Row>
         <Row>
-          <Button label="=" onCLick={handleEquals}/>
           <Button label="0" onCLick={() => handleAddNumber('0')}/>
           <Button label="." onCLick={() => handleAddNumber('.')}/>
         </Row>
-        
       </Content>
     </Container>
   );
