@@ -31,7 +31,7 @@ const App = () => {
       setCurrentNumber(String(sum))
       setOperation('')
     }
-  }
+  };
 
   const subtraiNumeros = () => {
     if(firstNumber === '0'){
@@ -57,30 +57,56 @@ const App = () => {
     }
   }
 
+  const dividiNumeros = () => {
+    if(firstNumber === '0'){
+      setFirstNumber(String(currentNumber));
+      setCurrentNumber('0')
+      setOperation('/')
+    }else {
+      const sum = Number(firstNumber) / Number(currentNumber)
+      setCurrentNumber(String(sum))
+      setOperation('')
+    }
+  }
+
   const handleEquals= () => {
     if(firstNumber !== '0' && operation !== '' && currentNumber !== '0'){
       switch(operation){
         case '+':
           somaNumeros();
           break;
+
         case '-':
           subtraiNumeros();
           break;
+
+        case '*':
+          multiplicaNumeros();
+          break;
+
+        case '/':
+          dividiNumeros();
+          break;
+
         default:
           break;
-      }
     }
   }
+}
+
 
   return (
     <Container>
       <Content>
         <Input value={currentNumber}/>
         <Row>
-          <Button label="X" onCLick={multiplicaNumeros}/>
-          <Button label="-" onCLick={subtraiNumeros}/>
-          <Button label="+" onCLick={somaNumeros}/>
-          <Button label="/" onCLick={() => handleAddNumber('')}/>
+          <Button label="c" onCLick={handleOnClear}/>
+        </Row>
+        <Row>
+          <Button label="x" onCLick={multiplicaNumeros} />
+          <Button label="-" onCLick={subtraiNumeros} />
+          <Button label="+" onCLick={somaNumeros} />
+          <Button label="/" onCLick={dividiNumeros} />
         </Row>
         <Row>
           <Button label="7" onCLick={() => handleAddNumber('7')}/>
@@ -101,7 +127,7 @@ const App = () => {
         <Row>
           <Button label="=" onCLick={handleEquals}/>
           <Button label="0" onCLick={() => handleAddNumber('0')}/>
-          <Button label="C" onCLick={handleOnClear}/>
+          <Button label="." onCLick={() => handleAddNumber('.')}/>
         </Row>
         
       </Content>
