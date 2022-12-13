@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export const ButtonContainer = styled.button `
+export const ButtonOperations = styled.button `
     padding: 10px;
     border: 1px solid #e6cdb3;
-    background-color: #9c6644;
+    background-color: #7e553a;
     color: #e6cdb3;
 
     font-size: 24px;

@@ -1,5 +1,6 @@
 import Input from './components/Input'
 import Button from './components/Button'
+import ButtonOpe from './components/ButtonOperations';
 
 
 import { Container, Content, Row} from './styles';
@@ -100,14 +101,14 @@ const App = () => {
       <Content>
         <Input value={currentNumber}/>
         <Row>
-          <Button label="c" onCLick={handleOnClear}/>
-          <Button label="=" onCLick={handleEquals}/>
+          <ButtonOpe label="c" onCLick={handleOnClear}/>
+          <ButtonOpe label="=" onCLick={handleEquals}/>
         </Row>
         <Row>
-          <Button label="x" onCLick={multiplicaNumeros} />
-          <Button label="-" onCLick={subtraiNumeros} />
-          <Button label="+" onCLick={somaNumeros} />
-          <Button label="/" onCLick={dividiNumeros} />
+          <ButtonOpe label="x" onCLick={multiplicaNumeros} />
+          <ButtonOpe label="-" onCLick={subtraiNumeros} />
+          <ButtonOpe label="+" onCLick={somaNumeros} />
+          <ButtonOpe label="/" onCLick={dividiNumeros} />
         </Row>
         <Row>
           <Button label="7" onCLick={() => handleAddNumber('7')}/>
