@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Calculadora-React
+
+![screenbud-d364c16a-ac7f-4db0-b57b-c388da08735c](https://user-images.githubusercontent.com/63432907/207241775-0a0a16ee-d01f-41a0-a35a-1278b1413180.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
